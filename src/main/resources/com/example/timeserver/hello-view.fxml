@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.timeserver.HelloController"
+      spacing="15"
+      alignment="CENTER"
+      style="-fx-padding: 20;">
+
+    <!-- Тики -->
+    <Label fx:id="tickLabel" text="Тики: 0" style="-fx-font-size: 16px;"/>
+
+    <Separator/>
+
+    <!-- Секундомер -->
+    <Label text="Секундомер" style="-fx-font-weight: bold;"/>
+    <Label fx:id="stopwatchLabel" text="0"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Старт" onAction="#startStopwatch"/>
+        <Button text="Стоп" onAction="#stopStopwatch"/>
+        <Button text="Сброс" onAction="#resetStopwatch"/>
+    </HBox>
+
+    <Separator/>
+
+    <!-- Таймер -->
+    <Label text="Таймер (тики)" style="-fx-font-weight: bold;"/>
+    <TextField fx:id="timerField" promptText="Введите количество тиков"/>
+    <Label fx:id="timerLabel" text="Таймер не запущен"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Старт" onAction="#startTimer"/>
+        <Button text="Сброс" onAction="#resetTimer"/>
+    </HBox>
+
+    <Separator/>
+
+    <!-- Будильник -->
+    <Label text="Будильник (номер тика)" style="-fx-font-weight: bold;"/>
+    <TextField fx:id="alarmField" promptText="Введите номер тика"/>
+    <Label fx:id="alarmLabel" text="Будильник не установлен"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Старт" onAction="#startAlarm"/>
+        <Button text="Сброс" onAction="#resetAlarm"/>
+    </HBox>
+
+</VBox>
